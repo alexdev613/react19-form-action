@@ -1,9 +1,13 @@
 import { useState } from "react";
+import { ButtonSubmit } from "./components/Button";
 
 export default function App() {
   const [message, setMessage] = useState("");
 
-  function handleRegister(formData: FormData){
+  async function handleRegister(formData: FormData){
+    // FAKE DELAY
+    await new Promise(resolve => setTimeout(resolve, 2500));
+
     const nome = formData.get("nome");
     const tarefa = formData.get("tarefa");
 
@@ -29,7 +33,7 @@ export default function App() {
           placeholder="Digite a tarefa..."
         /><br />
 
-        <button type="submit">Cadastrar</button>
+        <ButtonSubmit/>
       </form>
 
       <h2>{message}</h2>
