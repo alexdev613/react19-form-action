@@ -1,5 +1,7 @@
+import { useState } from "react";
 
 export default function App() {
+  const [message, setMessage] = useState("");
 
   function handleRegister(formData: FormData){
     const nome = formData.get("nome");
@@ -7,6 +9,8 @@ export default function App() {
 
     console.log(nome);
     console.log(tarefa);
+
+    setMessage("Bem vindo(a) " + nome + " sua tarefa é " + tarefa);
   }
 
   return (
@@ -27,6 +31,8 @@ export default function App() {
 
         <button type="submit">Cadastrar</button>
       </form>
+
+      <h2>{message}</h2>
     </div>
   )
 }
