@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ButtonSubmit } from "./components/Button";
+import { NewUser } from './Transition';
 
 export default function App() {
   const [message, setMessage] = useState("");
@@ -37,6 +38,9 @@ export default function App() {
       </form>
 
       <h2>{message}</h2>
+
+      <hr />
+      <NewUser/>
     </div>
   )
 }
