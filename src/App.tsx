@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { ButtonSubmit } from "./components/Button";
 import { NewUser } from './Transition';
+import { ActionState } from "./ActionState";
 
 export default function App() {
   const [message, setMessage] = useState("");
@@ -41,6 +42,8 @@ export default function App() {
 
       <hr />
       <NewUser/>
+      <hr />
+      <ActionState/>
     </div>
   )
 }
